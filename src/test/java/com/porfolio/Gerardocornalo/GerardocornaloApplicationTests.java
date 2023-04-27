@@ -1,10 +1,10 @@
-package com.porfolio.GustavoP;
+package com.porfolio.Gerardocornalo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GustavoPApplicationTests {
+class GerardocornaloApplicationTests {
 
 	@Test
 	void contextLoads() {
