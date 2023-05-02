@@ -1,55 +1,40 @@
-package com.porfolio.Gerardocornalo.Entity;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.porfolio.Gerardocornalo.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotBlank;
 
-@Entity
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    
-    @NotNull
-    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+/**
+ *
+ * @author Usuario
+ */
+public class dtoPersona {
+    @NotBlank
     private String nombre;
-    
-    @NotNull
-    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+    @NotBlank
     private String apellido;
-    
-    @NotNull
+    @NotBlank
     private String descripcion;
-     @NotNull
-    @Size(min = 1, max = 200, message = "no cumple con la longitud")
+    @NotBlank
     private String img;
-     
-     @NotNull
-    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+     @NotBlank
     private String ubicacion;
-     @NotNull
-    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+      @NotBlank
     private String telefono;
-     @NotNull
-    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+       @NotBlank
     private String email;
-     
-     @NotNull
-    @Size(min = 1, max = 50, message = "no cumple con la longitud")
-    private String presentacion ;
-     
-@NotNull
-    @Size(min = 1, max = 350, message = "no cumple con la longitud")
+        @NotBlank
+    private String presentacion;
+         @NotBlank
     private String acercaDe;
 
-
-    public Persona() {
+    public dtoPersona() {
     }
 
-    public Persona(String nombre, String apellido, String descripcion, String img, String ubicacion, String telefono, String email, String presentacion, String acercaDe) {
+    public dtoPersona(String nombre, String apellido, String descripcion, String img, String ubicacion, String telefono, String email, String presentacion, String acercaDe) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.descripcion = descripcion;
@@ -102,13 +87,6 @@ public class Persona {
     }
 
     
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getNombre() {
         return nombre;
@@ -141,10 +119,6 @@ public class Persona {
     public void setImg(String img) {
         this.img = img;
     }
-
-    
-    
-    
     
     
 }
