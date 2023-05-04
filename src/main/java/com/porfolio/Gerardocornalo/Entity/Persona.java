@@ -8,43 +8,44 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
+
 public class Persona {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    
+
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String nombre;
-    
+
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String apellido;
-    
+
     @NotNull
     private String descripcion;
-     @NotNull
+    @NotNull
     @Size(min = 1, max = 200, message = "no cumple con la longitud")
     private String img;
-     
-     @NotNull
+
+    @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String ubicacion;
-     @NotNull
+    @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String telefono;
-     @NotNull
+    @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String email;
-     
-     @NotNull
+
+    @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
-    private String presentacion ;
-     
-@NotNull
+    private String presentacion;
+
+    @NotNull
     @Size(min = 1, max = 350, message = "no cumple con la longitud")
     private String acercaDe;
-
 
     public Persona() {
     }
@@ -101,7 +102,6 @@ public class Persona {
         this.acercaDe = acercaDe;
     }
 
-    
     public int getId() {
         return id;
     }
@@ -142,9 +142,4 @@ public class Persona {
         this.img = img;
     }
 
-    
-    
-    
-    
-    
 }
