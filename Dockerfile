@@ -10,6 +10,6 @@ RUN mvn clean package
 #
 
 FROM openjdk:17-jdk-slim
-COPY --from=build /target/Gerardocornalo-0.0.1-SNAPSHOT.jar ggc-app.jar
+COPY --from=build /target/gerardocornalo-0.0.1-SNAPSHOT.jar ggc-app.jar
 
 ENTRYPOINT ["java","-jar","ggc-app.jar"]
